@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/dmsans_bold"
+        android:text="Fishy Finder"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="82dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_fishy" />
+
+    <!-- Kotak Hasil -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Preview gambar -->
+            <FrameLayout
+                android:id="@+id/imageResultContainer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg_dotted_border"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_gambar" />
+            </FrameLayout>
+
+        <!-- Informasi Tanaman yang Terdeteksi -->
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:gravity="center"
+                android:text="Deskripsi"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#F9F9F9"
+            app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/detectedPlantsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist_medium"
+                        android:text="Habitat Air Tawar"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="start" />
+
+                    <TextView
+                        android:id="@+id/detectedPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/urbanist_medium"
+                        android:text="Ikan Gurame"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/detectedPlantsDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/urbanist_medium"
+                        android:text="Ikan yang hidup di sungai, danau, atau kolam dengan kadar garam rendah."
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/allProbabilitiesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="16dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Hasil Diagnosis -->
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

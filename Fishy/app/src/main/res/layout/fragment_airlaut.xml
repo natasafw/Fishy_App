@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- CardView for the entire content -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#F9F9F9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="475dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imagePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_image_bg"
+                android:clipToOutline="true"
+                android:scaleType="center"
+                android:src="@drawable/airlaut" />
+
+            <TextView
+                android:id="@+id/AirTawar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dmsans_bold"
+                android:text="IKAN AIR ASIN"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="Ikan air asin adalah jenis ikan yang hidup di perairan laut dengan kadar garam tinggi. Ikan-ikan ini biasanya ditemukan di samudra, laut lepas, hingga pesisir pantai, dan memiliki kemampuan beradaptasi dengan lingkungan laut yang dinamis. Karena hidup di laut, ikan air asin umumnya memiliki daging yang lebih bertekstur dan kaya akan nutrisi seperti omega-3. Contoh ikan air asin yang sering dikonsumsi antara lain ikan tongkol, tuna, kembung, kakap, dan tenggiri. "
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/dmsans_bold"
+        android:text="Fishy Finder"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="82dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_fishy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

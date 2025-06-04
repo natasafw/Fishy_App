@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.view.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Logo and Title -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="73dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/logo_fishy" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/dmsans_extrabold"
+                    android:text="Fishy Finder"
+                    android:textColor="@color/birutua"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Welcome Message -->
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/dmsans_extrabold"
+                android:text="Selamat Datang Fisher!"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:gravity="center" />
+
+            <!-- App Description -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/birumuda">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/dmsans_medium"
+                        android:text="Fishy Finder adalah aplikasi AI yang mengidentifikasi jenis ikan secara instan. Unggah foto lalu deteksi ikan!"
+                        android:textColor="@color/birutua"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/logo_fishy" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Fish Habitat Section -->
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_extrabold"
+                android:text="Habitat Ikan"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:gravity="center" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <!-- Fish Items -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle_pink"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:src="@drawable/fish"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerInside"
+                                android:layout_gravity="center" /> <!-- Ensure the image is centered -->
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ikan Air Tawar"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle_pink"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:src="@drawable/fish"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerInside"
+                                android:layout_gravity="center" /> <!-- Ensure the image is centered -->
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ikan Air Payau"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <FrameLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle_pink"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:src="@drawable/fish"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerInside"
+                                android:layout_gravity="center" /> <!-- Ensure the image is centered -->
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ikan Air Asin"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Freshwater Article -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewArtikelAirTawar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/birumuda">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/airtawar"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/fish2" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:id="@+id/airtawar_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_bold"
+                                android:gravity="start"
+                                android:text="Berikut Adalah jenis Ikan Air Tawar...."
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+                            <Button
+                                android:id="@+id/btnAirTawar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/birutua"
+                                android:text="Cek Detail ->"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Saltwater Article -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewArtikelAirLaut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/birumuda">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/airlaut"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/fish2" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:id="@+id/airlaut_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_bold"
+                                android:gravity="start"
+                                android:text="Berikut Adalah jenis Ikan Air Laut...."
+                                android:textColor="@color/black"
+                                android:textSize="13sp" />
+
+                            <Button
+                                android:id="@+id/btnAirLaut"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/birutua"
+                                android:text="Cek Detail ->"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Button Section for History, Check Fish, and Information -->
+            <LinearLayout
+                android:id="@+id/buttonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                
+                <LinearLayout
+                    android:id="@+id/uploadSection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_camera" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/dmsans_medium"
+                        android:text="Cek Ikan"
+                        android:textColor="@color/birutua"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/informasiSection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_info" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/dmsans_medium"
+                        android:text="Informasi"
+                        android:textColor="@color/birutua"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
